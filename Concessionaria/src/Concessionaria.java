@@ -13,8 +13,7 @@ public class Concessionaria {
     String input;
     int inputInt;
 
-    User user1 = new User("Pippo", "password", 345, 1 );
-
+    User user1 = new User();
 
     ArrayList<Moto> listaMoto = new ArrayList<>();
     ArrayList<Auto> listaAuto = new ArrayList<>();
@@ -25,25 +24,24 @@ public class Concessionaria {
     listaMoto.add(moto);
     listaAuto.add(auto);
 
-    //Login
+    // Login
 
     System.out.println("Login\n");
 
-    
+    String passwordUtente;
     System.out.println("Inserisci nome utente");
-    input = sc.nextLine();
+    String nomeUtente = sc.nextLine();
+    user1.nomeutenteCheck(nomeUtente);
+    // Password
+    System.out.println("Inserisci una password");
+    passwordUtente = sc.nextLine();
+    user1.passwordCheck(passwordUtente);
+    System.out.println("Sei stato registrato correttamente");
+    // Dobbiamo ancora creare i metodi per inserire il conto e l'id incrementato
 
-    if (!(input.equals(user1.getPassword()))) {
-      System.out.println("Nome utente errato!");
-    } 
-
-    System.out.println("Inserisci password");
-    input = sc.nextLine();
-
-    if (!(input.equals(user1.getUserName()))) {
-      System.out.println("Password errata!");
-    } 
-    
-
+    User user2 = new User(nomeUtente, passwordUtente);
+    System.out
+        .println(user2.getConto() + "\n" + user2.getId() + "\n" + user2.getUserName()
+            + "\n" + user2.getPassword());
   }
 }
