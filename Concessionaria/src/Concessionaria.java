@@ -76,6 +76,7 @@ public class Concessionaria {
           System.out.println(a);
         break;
       default:
+      System.out.println("scelta non valida");
         break;
     }
   }
