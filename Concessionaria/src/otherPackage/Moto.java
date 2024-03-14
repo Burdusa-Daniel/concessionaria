@@ -34,5 +34,13 @@ public class Moto {
     this.motoName = motoName;
   }
 
+
+
+
+  @Override
+  public String toString() {
+    return "prezzo= " + price + " nome= " + motoName;
+  }
+
   
 }

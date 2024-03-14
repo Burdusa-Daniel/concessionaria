@@ -62,14 +62,18 @@ public class Concessionaria {
     System.out.println("premi 2 per vedere il catalogo dell moto ");
     int inputUtente = sc.nextInt();
 
+    //faccio vedere all'utente il catalogo che ha scelto
     switch (inputUtente) {
       case 1:
         System.out.println("le macchine a nostra disposizione sono: ");
-for(int i = 0 ; i<listaAuto.size(); i++){
-  //!!!!!!!!!!! non abbiamo fatto in tempo :(
-}
+
+        for (Auto a : listaAuto)
+          System.out.println(a);
         break;
       case 2:
+        System.out.println("le moto a nostra disposizione sono: ");
+        for (Moto a : listaMoto)
+          System.out.println(a);
         break;
       default:
         break;
